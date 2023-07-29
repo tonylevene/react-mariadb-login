@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import EditProfile from "./components/EditProfile";
+
 const App = () => {
   const [selectedItem, setSelectedItem] = useState("Login");
 
@@ -35,11 +39,12 @@ const App = () => {
             Edit Profile
           </a>
         </div>
-        <div className="bg-slate-300 inline-flex rounded-es-xl rounded-ee-xl p-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eos
-          cum nemo, impedit minima qui, soluta quisquam earum tempore quae
-          facilis nisi fugit provident reiciendis, aperiam laboriosam
-          consequatur? Porro, saepe?
+        <div className="bg-slate-300 inline-block rounded-es-xl rounded-ee-xl p-3 w-full">
+          {selectedItem === "Login" ? (
+            <Login setSelectedItem={setSelectedItem} />
+          ) : null}
+          {selectedItem === "Signup" ? <Signup /> : null}
+          {selectedItem === "Edit Profile" ? <EditProfile /> : null}
         </div>
       </div>
     </div>
