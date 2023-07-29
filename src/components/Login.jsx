@@ -60,7 +60,7 @@ const Login = (props) => {
         onClick={() => {
           login(user.first_name, user.last_name, user.email, user.password);
         }}
-        className="w-full px-4 py-2 mt-2 text-white border border-gray-200 rounded-md shadow-lg bg-green-700 mt-5"
+        className="w-full px-4 py-2 text-white border border-gray-200 rounded-md shadow-lg bg-green-700 mt-5"
       >
         Submit
       </button>
