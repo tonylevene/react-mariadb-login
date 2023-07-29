@@ -1,5 +1,6 @@
 import React from "react";
 
+// App function
 const App = () => {
   return (
     <div className="w-full h-full absolute bg-slate-400">
